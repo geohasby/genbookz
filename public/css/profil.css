@@ -1,0 +1,634 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    font-family: Bahnschrift, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 'profil konten';
+    grid-template-columns: 1fr 3fr;
+}
+
+.container hr {
+    margin: 0;
+}
+/* Profil */
+.profil {
+    grid-area: profil;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.prof-jdl {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.profil h4 {
+    font-size: 25px;
+    text-decoration: underline solid black;
+}
+
+.tbl_pensil {
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.tbl_pensil:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.icon_profil {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 120px;
+    width: 120px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.icon_profil p {
+    font-size: 70px;
+    margin: auto;
+    color: white;
+}
+
+P.username {
+    font-weight: bold;
+}
+
+span.jam.jam-map-marker-f, span.jam.jam-calendar-alt, span.jam.jam-heart-f {
+    color: #ff00ff;
+}
+
+.tombolIkuti {
+    margin: 8px 0;
+}
+
+.tbl_ikuti {
+    color: #ff00ff;
+    border-color: #ff00ff;
+    border-radius: 30px;
+    width: 170px;
+    padding: 0;
+    border: 2px solid;
+}
+
+.tbl_ikuti:hover {
+    border-color: #ff00ff;
+    background-color: #ff00ff;
+}
+
+.ikuti {
+    padding: 8px 0;
+    display: grid;
+    grid-template-areas: 'db'
+                         'pengikut'
+                         'mengikuti';
+    row-gap: 7px;
+}
+
+.tbl_opsi {
+    color: black;
+    border-radius: 30px;
+    width: 160px;
+    padding: 0;
+    border: 1px solid;
+}
+
+.tbl_opsi p {
+    display: inline;
+}
+
+.tbl_opsi:hover {
+    border: 1px solid;
+    border-color: #ff00ff;
+    background-color: white;
+    color: #ff00ff;
+}
+
+.profil .col-lg {
+    padding: 20px;
+}
+
+.keterangan p {
+    margin-bottom: 5px;
+}
+
+/* Daftar Bacaan */
+.konten-all {
+    grid-area: konten;
+    background-color: #eee;
+    padding: 30px;
+}
+
+.judul-konten {
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: underline solid #ff00ff;
+    margin-bottom: 10px;
+}
+
+.daftar_bacaan {
+    display: grid;
+    grid-template-columns: 1fr 4.5fr;
+    column-gap: 10px;
+    padding: 15px 0;
+}
+
+.tumbnail_df img {
+    width: 120px;
+    height: 170px;
+    border: 1px solid gray;
+}
+
+.daftar_bacaan .list_buku {
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid gray;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.list_buku {
+    padding: 15px;
+    position: relative;
+}
+
+.img-listbuku {
+    display: flex;
+}
+
+.tumbnail-buku {
+    margin-right: 10px;
+}
+
+.tumbnail-buku img {
+    width: 110px;
+}
+
+.gradien {
+    position: absolute;
+    background-image: linear-gradient(to left,white, white , rgba(0,0,0,0));
+    height: 100%;
+    width: 150px;
+    right: 0;
+    top: 0;
+}
+
+/* share profil */
+.bagikan-profil {
+    padding-top: 8px;
+}
+
+.lg-sosmed {
+    margin-top: 5px;
+}
+
+.sosmed {
+    display: inline-block;
+    font-size: 27px;
+    color: #ff00ff;
+    margin-right: 5px;
+}
+
+/* div pengikut */
+.card-prof-other {
+    display: grid;
+    grid-template-areas: 'oava ousername obtn'
+                         'oava oname obtn';
+    grid-template-columns: 1fr 6fr 2fr;
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+.card-prof-other:hover {
+    text-decoration: none;
+}
+
+.cont-img-card {
+    grid-area: oava;
+    overflow: hidden;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 6px 10px 6px 6px;
+}
+
+.cont-img-card img {
+    width: 100%;
+    height: 100%;
+}
+
+.cont-username-prof {
+    grid-area: ousername;
+    color: black;
+    align-self: flex-end;
+}
+
+.cont-name-prof {
+    grid-area: oname;
+    color: black;
+    font-weight: lighter;
+}
+
+.btn-flw-card {
+    grid-area: obtn;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.btn-prof-other {
+    background-color: #fff;
+    border: 1px solid #ff00ff;
+    color: #ff00ff;
+    border-radius: 6px;
+    font-size: 15px;
+    padding: 4px 20px;
+}
+
+.btn-prof-other:hover {
+    color: #ff00ff;
+}
+
+/* hilangkna */
+
+
+.prof-hilangkan {
+    display: none!important;
+}
+
+.tumbnail p {
+    margin-bottom: 8px;
+}
+/* footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #ececec;
+    padding: 0 10%;
+    display: grid;
+    grid-template-areas: 'footer-layanan footer-icon';
+    grid-auto-columns: 3fr 2fr;
+    height: 55px;
+}
+
+.footer  a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-layanan ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-layanan {
+    grid-area: footer-layanan;
+    align-self: center;
+}
+
+.footer-layanan ul{
+    padding: 0;
+}
+
+
+.footer-icon {
+    grid-area: footer-icon;
+}
+
+/*grid footer icon*/
+
+.footer-icon {
+    display: grid;
+    grid-template-areas: 'icon-sosmed icon-genbookz';
+    grid-auto-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.icon-sosmed {
+    grid-area: icon-sosmed;
+}
+
+.icon-sosmed ul {
+    grid-area: icon-sosmed;
+    padding: 0;
+    text-align: right;
+}
+
+.icon-genbookz {
+    grid-area: icon-genbookz;
+}
+
+/*footer icon*/
+
+a img.icon-fb {
+    height: 34px;
+    width: 36px;
+}
+
+.footer-icon {
+    align-items: center;
+}
+
+
+.footer-icon .icon-sosmed ul li {
+    display: inline-block;
+}
+
+.icon-genbookz {
+    color: rgb(133, 125, 125);
+    height: 26.36px;
+    position: relative;
+}
+
+.logo1 .lg-bw {
+    height: 24px;
+    width: 22px;
+    margin-right: 5px;
+}
+
+p.lg-footer {
+    font-size: 17px;
+    font-weight: 600;
+    color: #989898;
+}
+
+.icon-genbookz #copy {
+    font-size: 11pt;
+    color: #989898;
+}
+
+.icon-sosmed a {
+    color: #989898;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.genbookz-copy {
+    position: absolute;
+    top: 5px;
+    left: 30px;
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+    .footer {
+        display: grid;
+        grid-template-areas: 'footer-layanan' 'footer-icon';
+        grid-auto-columns: 1fr 1.2fr;
+        height: max-content;
+    }
+
+    .footer-layanan ul li {
+        display: block;
+        font-size: 10px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-icon {
+        display: grid;
+        grid-template-areas: 'icon-genbookz' 'icon-sosmed';
+        grid-auto-rows: 1fr 2.5fr;
+        position: relative;
+    }
+
+    .icon-sosmed a {
+        font-size: 25px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .icon-sosmed ul {
+        text-align: center;
+    }
+
+    .footer-icon {
+        gap: 0px;
+    }
+
+    .icon-genbookz {
+        text-align: center;
+    }
+
+    .genbookz-copy {
+        position: absolute;
+        display: inline-block;
+        top: 5px;
+        left: 33%;
+    }
+
+    .logo1 .lg-bw {
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        left: 25%;
+    }
+}
+@media (max-width: 500px) {
+    body {
+        background-color: #eee;
+    }
+    .container {
+        grid-template-areas: 'profil'
+                             'konten';
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .container hr {
+        display: none;
+    }
+
+    .profil {
+        padding: 0;
+    }
+
+    .prof-jdl {
+        padding: 10px;
+        box-shadow: 0 1px 5px 1px lightgray;
+    }
+
+    .prof-jdl h4 {
+        text-decoration: none;
+    }
+
+    .tbl_pensil {
+        font-size: 25px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .konten-prof {
+        padding: 10px 15px;
+        display: grid;
+        grid-template-areas: 'ava data'
+                             'ava ikuti'
+                             'desk desk'
+                             'share share';
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .icon_profil {
+        grid-area: ava;
+        width: 90px;
+        height: 90px;
+    }
+
+    .icon_profil p {
+        font-size: 50px;
+        margin: auto;
+        color: white;
+    }
+
+    .prof-isi {
+        grid-area: desk;
+    }
+
+    .tombolIkuti {
+        grid-area: ikuti;
+        padding: 0 10%;
+    }
+
+    .tbl_ikuti {
+        width: 100%;
+    }
+
+    .ikuti {
+        grid-area: data;
+        padding: 10px 10px 0;
+        grid-template-areas: 'db pengikut mengikuti';
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 12px;
+    }
+
+    p.jml-db, p.jml-flwg, p.jml-flwr {
+        display: block;
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .tbl_opsi {
+        border: none;
+        width: auto;
+        line-height: 1;
+        border-radius: 0;
+    }
+
+    .tbl_opsi:hover {
+        border: none;
+        background-color: #fff;
+    }
+
+    .bagikan-profil {
+        grid-area: share;
+    }
+
+    /* konten */
+    .konten-all {
+        padding: 0;
+    }
+
+    .judul-konten {
+        padding: 8px;
+        margin: 0;
+        text-align: center;
+        font-weight: normal;
+        text-decoration: none;
+        background-color: #fff;
+        border-top: 1px solid darkgray;
+        border-bottom: 1px solid darkgray;
+    }
+
+    .isi-konten {
+        padding: 5px 5px;
+    }
+
+    .isi-konten-db {
+        display: flex;
+    }
+
+    .daftar_bacaan {
+        display: block;
+        padding: 10px 8px;
+    }
+
+    .list_buku {
+        display: none;
+    }
+
+    .tumbnail_df img {
+        width: 106px;
+        height: auto;
+    }
+
+    /* div pengikut */
+    .card-prof-other {
+        grid-template-columns: 1fr 4fr 2fr;
+    }
+
+    .cont-img-card {
+        height: 50px;
+        width: 50px;
+    }
+
+    .btn-prof-other {
+        padding: 2px 17px;
+    }
+}

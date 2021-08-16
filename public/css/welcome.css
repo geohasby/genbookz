@@ -1,0 +1,534 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ? STYLE */
+
+body {
+    font-family: Bahnschrift, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.bg1 {
+    position: fixed;
+    right: -200px;
+    z-index: -22;
+}
+.bg2 {
+    position: fixed;
+    left: -200px;
+    bottom: 5%;
+    z-index: -22;
+}
+.container {
+    padding: 0;
+}
+
+/* nav */
+.navbarx {
+    display: grid;
+    grid-template-areas: 'logo bahasa';
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+
+/* logo */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    display: inline-block;
+    line-height: 34px;
+    margin-top: -2px;
+    margin-left: -2px;
+    color: black;
+}
+.navbar-brand {
+    grid-area: logo;
+    padding: 0;
+    line-height: unset;
+    justify-self: start;
+    margin-right: 0;
+}
+
+/* bahasa */
+.dropdown1 {
+    grid-area: bahasa;
+    justify-self: end;
+    align-self: center;
+}
+.kategori {
+    background-color: transparent;
+    color: black;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 16px;
+    border-radius: 14px;
+    border: none;
+}
+.kategori:hover {
+    background-color: rgb(231, 26, 238);
+}
+.kategori::after {
+    vertical-align: 0.03em;
+    border-top: .5em solid;
+    margin-left: 0;
+
+}
+.dropdown-menu {
+    top: 100%;
+    border: 2px solid rgba(0,0,0,.25);
+    border-radius: 14px;
+}
+
+/* hero */
+.hero {
+    display: grid;
+    grid-template-areas: 'conten gambar';
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    padding-top: 110px;
+}
+
+/* conten */
+.conten {
+    grid-area: conten;
+}
+.hallo {
+    font-size: 53px;
+    font-weight: 800;
+    color: #d000cd;
+}
+.hallo2 {
+    font-size: 22px;
+    font-weight: 400;
+    padding-top: 26px;
+}
+.hallo3 {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    font-size: 22px;
+    color: rgba(0,0,0,.5);
+}
+.tombol {
+    display: grid;
+    grid-template-areas: 'daftar masuk tamu';
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+.daftar {
+    grid-area: daftar;
+}
+.masuk {
+    grid-area: masuk;
+}
+.tamu {
+    grid-area: tamu;
+}
+.btn-daftar {
+    background-color: #ff69ff;
+    border-color: #ff69ff;
+    font-size: 28px;
+    line-height: 1;
+    padding: 7px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,.4);
+}
+.btn-daftar:hover {
+    background-color: #cd37cd;
+    border-color: #cd37cd;
+}
+.btn-daftar:focus {
+    background-color: #cd37cd;
+    border-color: #cd37cd;
+}
+.btn-masuk {
+    font-size: 28px;
+    background-color: #8e69ea;
+    border-color: #8e69ea;
+    line-height: 1;
+    padding: 7px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,.4);
+}
+.btn-masuk:hover {
+    background-color: #5c37b8;
+    border-color: #5c37b8;
+}
+.btn-masuk:focus {
+    background-color: #5c37b8;
+    border-color: #5c37b8;
+}
+.btn-tamu {
+    line-height: 1;
+    background-color: transparent;
+    border-color: black;
+    padding: 4.5px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,.4);
+}
+.penjelasan {
+    margin-top: 5px;
+    font-size: 13.5px;
+    color: rgba(0,0,0,.5);
+}
+
+/* gambar */
+div.dekorasi {
+    grid-area: gambar;
+    margin-top: -7%;
+}
+.dekorasi img {
+    transform: scale(1.02);
+}
+
+/* footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ececec;
+    padding: 0 10%;
+    display: grid;
+    grid-template-areas: 'footer-layanan footer-icon';
+    grid-auto-columns: 3fr 2fr;
+    height: 55px;
+}
+
+.footer  a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-layanan ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-layanan {
+    grid-area: footer-layanan;
+    align-self: center;
+}
+
+.footer-layanan ul{
+    padding: 0;
+}
+
+
+.footer-icon {
+    grid-area: footer-icon;
+}
+
+/*grid footer icon*/
+
+.footer-icon {
+    display: grid;
+    grid-template-areas: 'icon-sosmed icon-genbookz';
+    grid-auto-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.icon-sosmed {
+    grid-area: icon-sosmed;
+}
+
+.icon-sosmed ul {
+    grid-area: icon-sosmed;
+    padding: 0;
+    text-align: right;
+}
+
+.icon-genbookz {
+    grid-area: icon-genbookz;
+}
+
+/*footer icon*/
+
+a img.icon-fb {
+    height: 34px;
+    width: 36px;
+}
+
+.footer-icon {
+    align-items: center;
+}
+
+
+.footer-icon .icon-sosmed ul li {
+    display: inline-block;
+}
+
+.icon-genbookz {
+    color: rgb(133, 125, 125);
+    height: 26.36px;
+    position: relative;
+}
+
+.logo1 .lg-bw {
+    height: 24px;
+    width: 22px;
+    margin-right: 5px;
+}
+
+p.lg-footer {
+    font-size: 17px;
+    font-weight: 600;
+    color: #989898;
+}
+
+.icon-genbookz #copy {
+    font-size: 11pt;
+    color: #989898;
+}
+
+.icon-sosmed a {
+    color: #989898;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.genbookz-copy {
+    position: absolute;
+    top: -1px;
+    left: 30px;
+}
+
+
+/* breakpoint */
+@media (max-width:1200px) {
+    .dekorasi img {
+        transform: scale(0.9);
+    }
+    .hero {
+        grid-template-areas: 'gambar gambar'
+                             'conten conten';
+        column-gap: unset;
+        padding-top: 10%;
+    }
+    .conten {
+        justify-self: center;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .btn-tamu {
+        padding: 4.5px 40px;
+    }
+    .dekorasi {
+        justify-self: center;
+    }
+}
+@media (max-width: 991px) {
+    .btn-tamu {
+        padding: 4.5px 20px;
+    }
+}
+@media (max-width:768px) {
+    .tombol {
+        grid-template-areas: 'daftar masuk'
+                             'tamu tamu';
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: unset;
+        justify-items: center;
+        row-gap: 18px;
+        column-gap: 10px;
+    }
+    .tamu {
+        margin-left: -10%;
+    }
+    .btn-tamu, .btn-daftar, .btn-masuk {
+        margin-left: 20%;
+    }
+    .hero {
+        grid-template-areas: 'conten conten'
+                             'gambar gambar';
+    }
+    .conten {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .btn-tamu {
+        padding: 4.5px 40px;
+    }
+    .dekorasi {
+        width: 413px;
+    }
+    .dekorasi img {
+        margin-left: -20%;
+        transform: scale(0.7);
+    }
+    .bg1 {
+        right: -250px;
+    }
+    .bg2 {
+        left: -250px;
+    }
+    .footer {
+        display: grid;
+        grid-template-areas: 'footer-layanan' 'footer-icon';
+        grid-auto-columns: 1fr 1.2fr;
+        height: max-content;
+    }
+
+    .footer-layanan ul li {
+        display: block;
+        font-size: 10px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-icon {
+        display: grid;
+        grid-template-areas: 'icon-genbookz' 'icon-sosmed';
+        grid-auto-rows: 1fr 2.5fr;
+        position: relative;
+    }
+
+    .icon-sosmed a {
+        font-size: 25px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .icon-sosmed ul {
+        text-align: center;
+    }
+
+    .footer-icon {
+        gap: 0px;
+    }
+
+    .icon-genbookz {
+        text-align: center;
+    }
+
+    .genbookz-copy {
+        position: absolute;
+        display: inline-block;
+        top: 5px;
+        left: 33%;
+    }
+
+    .logo1 .lg-bw {
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        left: 25%;
+    }
+}
+@media (max-width: 654px) {
+    .btn-daftar, .btn-masuk {
+        margin-left: 12%;
+    }
+    .footer-layanan{
+        padding-left: 18%;
+    }
+    .li-1 {
+        margin-left: 5%;
+    }
+}
+@media (max-width: 570px) {
+    .navbar-brand, .dropdown1 {
+        justify-self: center;
+    }
+    .bg1, .bg2 {
+        display: none;
+    }
+    .masuk p, .daftar p {
+        margin-left: 10%;
+    }
+}
+@media (max-width: 500px) {
+    .hallo {
+        font-size: 43px;
+    }
+    .hallo2 {
+        font-size: 18px;
+    }
+    .hallo3 {
+        font-size: 18px;
+    }
+    .tombol {
+        grid-template-areas: 'daftar'
+                             'masuk'
+                             'tamu';
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        row-gap: 8px;
+    }
+    .tamu {
+        margin-left: 0;
+    }
+    .btn-daftar, .btn-masuk, .btn-tamu {
+        margin: 0;
+    }
+    .btn-daftar {
+        width: 100%;
+    }
+    .btn-masuk {
+        margin-left: -10%;
+        width: 120%;
+    }
+    .btn-daftar, .btn-masuk {
+        font-size: 24px;
+    }
+    .btn-tamu {
+        margin-left: -2.5%;
+        width: 105%;
+        font-size: 20px;
+        padding: 7px 30px;
+    }
+    .masuk p, .daftar p {
+        margin-left: 0;
+    }
+    div.dekorasi {
+        display: none;
+    }
+}
+@media (max-width: 400px) {
+    .dekorasi img {
+        transform: scale(0.55);
+    }
+}

@@ -1,0 +1,57 @@
+body {
+    font-family: Bahnschrift, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 30px;
+    text-decoration: underline #ff00ff;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+textarea {
+    box-shadow: #ff00ff!important;
+}
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+/* Tombol */
+.kirim {
+    background-color: #ff00ff;
+    border: none;
+    padding: 3px 30px;
+    margin-top: 15px;
+}
+
+.kirim:hover {
+    background-color: rgb(201, 17, 201);
+}
+
+/* Kolom Hitung */
+.kolom-hitung {
+    display: block;
+    font-size: 12px;
+    text-align: right;
+}
+
+@media(max-width:780px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1;
+    }
+}

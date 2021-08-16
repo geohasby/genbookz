@@ -1,0 +1,418 @@
+body {
+    font-family: Bahnschrift, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+/* Jumboton */
+.jumbotron {
+    height: 250px;
+    margin-bottom: 10px;
+    background-image: url(../img/Clown2.jpg);
+    background-size: cover;
+    padding: 0;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(40,219,255,0) 12%, rgba(0,212,255,0) 88%, rgba(255,255,255,1) 100%);
+}
+
+
+/* Katagori */
+.katagori {
+    width: 500px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.katagori .btn-katagori {
+    border: none;
+    color: black;
+    border-radius: 30px;
+    padding: 5px 8px;
+    background-color: white;
+    
+}
+
+.katagori .btn-katagori:hover {
+    background-color: #ee00ee;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+.katagori .btn-katagori:focus {
+    outline: unset;
+    background-color: #ee00ee;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-katagori {
+    display: none;
+}
+
+
+/* Card Book */
+.konten {
+    width: 1080px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.card-book {
+    display: grid;
+    grid-template-areas: 'tumbnail deskripsi';
+    grid-template-columns: 1fr 1.7fr;
+    height: 193px;
+    width: 350px;
+    border: 1.5px solid grey;
+    padding: 7px;
+    box-sizing: border-box;
+    gap: 10px;
+    position: relative;
+    margin: 5px 5px;
+}
+
+.card-book:hover {
+    border: 1.5px solid #ee00ee;
+}
+
+.tumbnail {
+    grid-area: tumbnail;
+}
+
+.tumbnail img {
+    width: 100%;
+}
+
+.deskripsi {
+    font-weight: lighter;
+    grid-area: deskripsi;
+}
+
+.deskripsi h4 {
+    font-weight: bold;
+    font-size: 16Spx;
+    margin-bottom: 2px;
+}
+
+.deskripsi p.rilis {
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+.deskripsi p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.deskripsi a {
+    font-size: 14px;
+    color: #ee00ee;
+    display: block;
+    text-align: right!important;
+}
+
+/* Dropdown */
+.titik3 {
+    border: none;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    padding: 0;
+}
+
+.titik3::after {
+    border: none; 
+}
+
+button:focus {
+    outline: none;
+    color: #ee00ee;
+}
+
+.tombol-list {
+    display: inline-block;
+    height: 25px;
+}
+
+.warna-#ee00ee {
+    color: #ee00ee;
+}
+
+/* Dropdown List */
+.dropdown-menu {
+    margin-left: -220px;
+}
+
+/* Footer */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    display: inline-block;
+    color: black;
+}
+
+.footer {
+    margin-top: 30px;
+    background-color: #ececec;
+    padding: 0 10%;
+    display: grid;
+    grid-template-areas: 'footer-layanan footer-icon';
+    grid-auto-columns: 3fr 2fr;
+    height: 55px;
+}
+
+.footer  a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-layanan ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-layanan {
+    grid-area: footer-layanan;
+    align-self: center;
+}
+
+.footer-layanan ul{
+    padding: 0;
+}
+
+
+.footer-icon {
+    grid-area: footer-icon;
+}
+
+/*grid footer icon*/
+
+.footer-icon {
+    display: grid;
+    grid-template-areas: 'icon-sosmed icon-genbookz';
+    grid-auto-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.icon-sosmed {
+    grid-area: icon-sosmed;
+}
+
+.icon-sosmed ul {
+    grid-area: icon-sosmed;
+    padding: 0;
+    text-align: right;
+}
+
+.icon-genbookz {
+    grid-area: icon-genbookz;
+}
+
+/*footer icon*/
+
+a img.icon-fb {
+    height: 34px;
+    width: 36px;
+}
+
+.footer-icon {
+    align-items: center;
+}
+
+
+.footer-icon .icon-sosmed ul li {
+    display: inline-block;
+}
+
+.icon-genbookz {
+    top: -4px;
+    color: rgb(133, 125, 125);
+    height: 26.36px;
+    position: relative;
+}
+
+.logo1 .lg-bw {
+    height: 24px;
+    width: 22px;
+    margin-right: 5px;
+}
+
+p.lg-footer {
+    font-size: 17px;
+    font-weight: 600;
+    color: #989898;
+}
+
+.icon-genbookz #copy {
+    font-size: 11pt;
+    color: #989898;
+}
+
+.icon-sosmed a {
+    color: #989898;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.genbookz-copy {
+    position: absolute;
+    top: 8px;
+    left: 30px;
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+    /* Jumbotoron */
+    .jumbotron {
+        height: 160px;
+        background-size: cover;
+        background-position: center;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    /* Katagori */
+    .katagori {
+        display: none;
+    }
+
+    .dropdown-katagori {
+        display: unset;
+    }
+
+    .jeneng {
+        font-size: 20px;
+    }
+
+    .dropdown, .dropdown-toggle, .dropdown-toggle:focus, .show>.btn-secondary.dropdown-toggle, .dropdown-toggle:active {
+        width: 100%;
+        background-color: #fff;
+        color: black;
+        border: none;
+        
+    }
+
+    .dropdown-menu-katagori {
+        margin: 0;
+        border: none;
+        transform: none!important;
+        background-color: #fff;
+        width: 100%;
+        
+    }
+
+    .btn-katagori {
+        color: black;
+        font-size: 20px;
+        padding: 15px;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .btn-katagori:active {
+        text-decoration: none;
+        color: black;
+    }
+
+
+    /* CardBook */
+    .konten {
+        width: unset;
+        margin-top: 0;
+        padding: 0px 5px;
+    }
+
+    .deskripsi .kumpulan-deskripsi {
+        display: none;
+        font-weight: lighter;
+    }
+
+    .card-book {
+        display: grid;
+        grid-template-areas: 'tumbnail tumbnail' 'deskripsi deskripsi';
+        gap:0;
+        width: 100px;
+        height: 141.69px;
+        padding: 0;
+        margin-top: 25px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .deskripsi h4 {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .deskripsi p {
+        display: none;
+    }
+
+    /* Footer */
+    .footer {
+        display: grid;
+        grid-template-areas: 'footer-layanan' 'footer-icon';
+        grid-auto-columns: 1fr 1.2fr;
+        height: max-content;
+    }
+
+    .footer-layanan ul li {
+        display: block;
+        font-size: 10px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-icon {
+        display: grid;
+        grid-template-areas: 'icon-genbookz' 'icon-sosmed';
+        grid-auto-rows: 1fr 2.5fr;
+        position: relative;
+    }
+
+    .icon-sosmed a {
+        font-size: 25px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .icon-sosmed ul {
+        text-align: center;
+    }
+
+    .footer-icon {
+        gap: 0px;
+    }
+
+    .icon-genbookz {
+        text-align: center;
+    }
+
+    .genbookz-copy {
+        position: absolute;
+        display: inline-block;
+        top: 5px;
+        left: 33%;
+    }
+
+    .logo1 .lg-bw {
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        left: 25%;
+    }
+}

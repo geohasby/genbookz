@@ -1,0 +1,560 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My CSS */
+.container {
+    display: grid;
+    grid-template-areas: 'deskripsi daftar-isi';
+    grid-template-columns: 0.9fr 3fr;
+}
+
+body {
+    font-family: Bahnschrift, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+/* Deskripsi Daftar Buku */
+.daftar-buku {
+    grid-area: deskripsi;
+    padding: 15px;
+    padding-right: 40px;
+    padding-left: 30px;
+}
+
+.daftar-buku .judul {
+    display: none;
+}
+
+.daftar-buku img {
+    height: 100%;
+    width: 100%;
+
+}
+
+.deskripsi-buku {
+    position: relative;
+}
+
+.daftar-buku h4 {
+    font-size: 24px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.daftar-buku p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.daftar-buku .jumlah-buku {
+    color: #ff00ff;
+}
+
+.daftar-buku .deskrip-buku {
+    margin-bottom: 15px;
+    font-weight: lighter;
+
+}
+
+.daftar-buku .icon-pensil {
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.daftar-buku .icon-like {
+    color: #ff00ff;
+}
+
+.daftar-buku .icon-profil {
+    display: inline-block;
+    background-color: salmon;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    align-content: center;
+}
+
+.daftar-buku .icon-profil p {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 3px;
+    height: 25px;
+    margin-bottom: 0;
+}
+
+.daftar-buku .nama-profil {
+    font-size: 14px;
+}
+
+.daftar-buku hr {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.daftar-buku .bagikan-daftar .sosmed {
+    font-size: 30px;
+    color: #ff00ff;
+}
+
+/* Daftar Isi */
+.daftar-isi {
+    grid-area: daftar-isi;
+    padding: 30px;
+    background-color: lightgray ;
+}
+
+.daftar-isi h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.daftar-isi .konten {
+    display: grid;
+    grid-template-columns: 0.8fr 4.5fr;
+    background-color: white;
+    padding: 7px;
+    border: 2px solid gray;
+    width: 750px;
+    height: 140px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.daftar-isi .konten:hover {
+    border: 2px solid #ff00ff;
+}
+
+.daftar-isi .konten .img {
+    height: 100%;
+}
+
+.daftar-isi .konten .img img {
+    height: 122px;
+}
+
+.daftar-isi .konten .deskripsi p {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.daftar-isi .konten .deskripsi h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.daftar-isi .konten .deskripsi p:nth-child(2) {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+/* Dropdown */
+.daftar-isi .konten .deskripsi .titik3 {
+    border: none;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    z-index: 3;
+}
+
+.titik3::after {
+    border: none; 
+}
+
+button:focus {
+    outline: none;
+    color: #ff00ff;
+}
+
+.tombol-list {
+    display: inline-block;
+    height: 25px;
+}
+
+/* Dropdown List */
+.dropdown-menu {
+    margin-left: -220px;
+}
+
+span.warna-genbookz {
+    color: #ff00ff;
+}
+
+/* Footer */
+/* footer */
+.footer {
+    background-color: #ececec;
+    padding: 0 10%;
+    display: grid;
+    grid-template-areas: 'footer-layanan footer-icon';
+    grid-auto-columns: 3fr 2fr;
+    height: 55px;
+}
+
+.footer  a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-layanan ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-layanan {
+    grid-area: footer-layanan;
+    align-self: center;
+}
+
+.footer-layanan ul{
+    padding: 0;
+}
+
+
+.footer-icon {
+    grid-area: footer-icon;
+}
+
+/*grid footer icon*/
+
+.footer-icon {
+    display: grid;
+    grid-template-areas: 'icon-sosmed icon-genbookz';
+    grid-auto-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.icon-sosmed {
+    grid-area: icon-sosmed;
+}
+
+.icon-sosmed ul {
+    grid-area: icon-sosmed;
+    padding: 0;
+    text-align: right;
+}
+
+.icon-genbookz {
+    grid-area: icon-genbookz;
+}
+
+/*footer icon*/
+
+a img.icon-fb {
+    height: 34px;
+    width: 36px;
+}
+
+.footer-icon {
+    align-items: center;
+}
+
+
+.footer-icon .icon-sosmed ul li {
+    display: inline-block;
+}
+
+.icon-genbookz {
+    top: -5px;
+    color: rgb(133, 125, 125);
+    height: 26.36px;
+    position: relative;
+}
+
+.logo1 .lg-bw {
+    height: 24px;
+    width: 22px;
+    margin-right: 5px;
+}
+
+p.lg-footer {
+    font-size: 17px;
+    font-weight: 600;
+    color: #989898;
+}
+
+.icon-genbookz #copy {
+    font-size: 11pt;
+    color: #989898;
+}
+
+.icon-sosmed a {
+    color: #989898;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.genbookz-copy {
+    position: absolute;
+    top: 5px;
+    left: 30px;
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+    
+    .container {
+        grid-template-areas: 'deskripsi'
+                             'daftar-isi';
+        grid-template-columns: 1fr;
+        padding: 0 !important;
+        
+    }
+
+    /* Daftar Buku */
+    .daftar-buku .judul {
+        display: block;
+    }
+
+    .daftar-buku {
+        display: grid;
+        grid-template-areas: 'judul judul'
+                             'gambar deskripsi'
+                             'share share';
+        grid-template-columns: 1fr 2fr;
+        column-gap: 10px;
+        padding: 0;
+    }
+
+    .daftar-buku .judul {
+        grid-area: judul;
+        padding: 10px;
+        box-shadow: 0 1px 5px 1px lightgray;
+        margin-bottom: 20px;
+    }
+
+    .daftar-buku h4 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .daftar-buku .judul p {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .daftar-buku .ava {
+        grid-area: gambar;
+        margin-left: 10px;
+    }
+
+    .daftar-buku .ava img {
+        width: 100%;
+    }
+
+    .daftar-buku .deskripsi-buku {
+        grid-area: deskripsi;
+        font-size: 12px;
+        width: auto;
+        position: unset;
+    }
+
+    .daftar-buku .bagikan-daftar {
+        grid-area: share;
+        margin-left: 10px;
+    }
+
+    .daftar-buku img {
+        height: auto;
+        width: auto;
+    }
+
+    .daftar-buku hr {
+        margin-left: -10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .daftar-buku .icon-pensil {
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+    }
+
+    .daftar-buku .deskrip-buku {
+        height: 70px;
+        overflow: hidden;
+    }
+
+    .daftar-buku .bagikan-daftar .sosmed {
+        font-size: 25px;
+    }
+
+    /* Daftar Isi */
+    .daftar-isi {
+        padding: 0px;
+        background-color: lightgray;
+        position: absolute;
+        top: 317px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .daftar-isi .konten {
+        height: min-content;
+        width: min-content;
+        display: block;
+    }
+
+    .daftar-isi .konten .deskripsi .isi-deskripsi {
+        display: none;
+    }
+
+    .daftar-isi .konten .judul-deskripsi h4 {
+        font-size: 13px;
+        margin-top: 3px;
+    }
+
+    .daftar-isi .judul-daftar h4 {
+        text-align: center;
+        width: 100%;
+        background-color: white;
+        border-top: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
+        padding: 3px;
+    }
+
+    .daftar-isi .penampung-konten {
+        padding: 12px;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+
+    }
+
+    .daftar-isi .konten {
+        padding: 0;
+        border: none;
+        background-color: unset;
+    }
+
+    .daftar-isi .konten:hover {
+        border: none;
+        color: #ff00ff;
+    }
+    
+
+    .daftar-isi .konten .img {
+        height: 150px;
+    }
+
+    .daftar-isi .konten .img img {
+        height: 100%;
+        border: 1px solid gray;
+    }
+
+    .daftar-isi .konten .img img:hover {
+        border: 1px solid #ff00ff;
+    }
+
+    /* Footer */
+    .footer {
+        display: grid;
+        grid-template-areas: 'footer-layanan' 'footer-icon';
+        grid-auto-columns: 1fr 1.2fr;
+        height: max-content;
+    }
+
+    .footer-layanan ul li {
+        display: block;
+        font-size: 10px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-icon {
+        display: grid;
+        grid-template-areas: 'icon-genbookz' 'icon-sosmed';
+        grid-auto-rows: 1fr 2.5fr;
+        position: relative;
+    }
+
+    .icon-sosmed a {
+        font-size: 25px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .icon-sosmed ul {
+        text-align: center;
+    }
+
+    .footer-icon {
+        gap: 0px;
+    }
+
+    .icon-genbookz {
+        text-align: center;
+    }
+
+    .genbookz-copy {
+        position: absolute;
+        display: inline-block;
+        top: 5px;
+        left: 33%;
+    }
+
+    .logo1 .lg-bw {
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        left: 25%;
+    }
+}
+

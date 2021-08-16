@@ -1,0 +1,323 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ? STYLE */
+
+body {
+    font-family: Bahnschrift, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.bg1 {
+    position: fixed;
+    right: -200px;
+    z-index: -22;
+}
+.bg2 {
+    position: fixed;
+    left: -200px;
+    bottom: 5%;
+    z-index: -22;
+}
+
+/* logo */
+.atas {
+    display: grid;
+    margin: 7% 0 2%;
+}
+body a.logo-u {
+    display: inline-block;
+    justify-self: center;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 22pt;
+    display: inline-block;
+    line-height: 34px;
+    margin-top: 2px;
+    margin-left: -2px;
+    color: rgb(0, 0, 0);
+}
+.logo-u1 {
+    color: #d000cd;
+}
+
+/* conten */
+.form-kotak {
+    margin: auto;
+    width: 600px;
+}
+.form-daftar {
+    background-color: rgb(180, 180, 180);
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,.4);
+    color: whitesmoke;
+    margin-bottom: 15px;
+}
+.judul {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.span1 {
+    line-height: 1.5;
+}
+.link-span {
+    color: rgb(0, 106, 235);
+}
+.link-span:hover {
+    text-decoration: none;
+}
+
+/* tombol keluar */
+.tombol {
+    display: grid;
+    justify-items: center;
+}
+a.btn-danger {
+    width: 200px;
+    border-radius: 20px;
+    font-size: 18px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    box-shadow: 0px 0px 3px 1px #dc354661;
+}
+
+/* alert */
+.alert-success {
+    background-color: rgb(0, 194, 16);
+    color: whitesmoke;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 3px 1px rgba(0, 194, 16,.4);
+}
+
+/* footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #ececec;
+    padding: 0 10%;
+    display: grid;
+    grid-template-areas: 'footer-layanan footer-icon';
+    grid-auto-columns: 3fr 2fr;
+    height: 55px;
+}
+
+.footer  a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-layanan ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-layanan {
+    grid-area: footer-layanan;
+    align-self: center;
+}
+
+.footer-layanan ul{
+    padding: 0;
+}
+
+
+.footer-icon {
+    grid-area: footer-icon;
+}
+
+/*grid footer icon*/
+
+.footer-icon {
+    display: grid;
+    grid-template-areas: 'icon-sosmed icon-genbookz';
+    grid-auto-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.icon-sosmed {
+    grid-area: icon-sosmed;
+}
+
+.icon-sosmed ul {
+    grid-area: icon-sosmed;
+    padding: 0;
+    text-align: right;
+}
+
+.icon-genbookz {
+    grid-area: icon-genbookz;
+}
+
+/*footer icon*/
+
+a img.icon-fb {
+    height: 34px;
+    width: 36px;
+}
+
+.footer-icon {
+    align-items: center;
+}
+
+
+.footer-icon .icon-sosmed ul li {
+    display: inline-block;
+}
+
+.icon-genbookz {
+    color: rgb(133, 125, 125);
+    height: 26.36px;
+    position: relative;
+}
+
+.logo1 .lg-bw {
+    height: 24px;
+    width: 22px;
+    margin-right: 5px;
+}
+
+p.lg-footer {
+    font-size: 17px;
+    font-weight: 600;
+    color: #989898;
+}
+
+.icon-genbookz #copy {
+    font-size: 11pt;
+    color: #989898;
+}
+
+.icon-sosmed a {
+    color: #989898;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.genbookz-copy {
+    position: absolute;
+    top: -3px;
+    left: 30px;
+}
+
+/* breakpoint */
+@media (max-width: 768px) {
+    .footer {
+        display: grid;
+        grid-template-areas: 'footer-layanan' 'footer-icon';
+        grid-auto-columns: 1fr 1.2fr;
+        height: max-content;
+    }
+
+    .footer-layanan ul li {
+        display: block;
+        font-size: 10px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-icon {
+        display: grid;
+        grid-template-areas: 'icon-genbookz' 'icon-sosmed';
+        grid-auto-rows: 1fr 2.5fr;
+        position: relative;
+    }
+
+    .icon-sosmed a {
+        font-size: 25px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .icon-sosmed ul {
+        text-align: center;
+    }
+
+    .footer-icon {
+        gap: 0px;
+    }
+
+    .icon-genbookz {
+        text-align: center;
+    }
+
+    .genbookz-copy {
+        position: absolute;
+        display: inline-block;
+        top: 5px;
+        left: 33%;
+    }
+
+    .logo1 .lg-bw {
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        left: 25%;
+    }
+}
+@media (max-width: 654px) {
+    .li-1 {
+        margin-left: 5%;
+    }
+}
+@media (max-width: 620px) {
+    .bg1, .bg2 {
+        display: none;
+    }
+    .form-kotak {
+        margin: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    .form-daftar {
+        background-color: transparent;
+        color: black;
+    }
+}

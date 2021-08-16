@@ -1,0 +1,534 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ? STYLE */
+
+body {
+    font-family: Bahnschrift, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.container {
+    padding: 0;
+    max-width: 1220px;
+}
+.bg1 {
+    display: none;
+    position: fixed;
+    right: -250px;
+    z-index: -22;
+}
+.bg2 {
+    display: none;
+    position: fixed;
+    left: -250px;
+    bottom: 5%;
+    z-index: -22;
+}
+
+/* nav */
+.navbar-daftar {
+    display: grid;
+    grid-template-areas: 'logo bahasa tamu-masuk';
+    grid-template-columns: 3fr 1fr 1.5fr;
+    margin-top: 2%;
+}
+
+/* logo */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    display: inline-block;
+    line-height: 34px;
+    margin-top: -2px;
+    margin-left: -2px;
+    color: black;
+}
+div.navbar-daftar .navbar-brand {
+    grid-area: logo;
+    padding: 0;
+    line-height: unset;
+    justify-self: start;
+}
+
+/* bahasa */
+.dropdown1 {
+    grid-area: bahasa;
+    justify-self: center;
+    align-self: center;
+}
+.kategori {
+    background-color: transparent;
+    color: black;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 16px;
+    border-radius: 14px;
+    border: none;
+}
+.kategori:hover {
+    background-color: rgb(231, 26, 238);
+}
+.kategori::after {
+    vertical-align: 0.03em;
+    border-top: .5em solid;
+    margin-left: 0;
+
+}
+.dropdown-menu {
+    top: 100%;
+    border: 2px solid rgba(0,0,0,.25);
+    border-radius: 14px;
+}
+
+/* link ke tamu dan masuk */
+.navbar-daftar .tamu-masuk {
+    grid-area: tamu-masuk;
+    align-self: center;
+    justify-self: end;
+}
+.btn-tamu {
+    line-height: 1;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 4.5px 20px;
+    border-radius: 8px;
+}
+.btn-masuk {
+    margin-left: 15px;
+    line-height: 1;
+    background-color: transparent;
+    border-color: black;
+    padding: 4.5px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,.4);
+}
+.btn-masuk:hover {
+    background-color: #8e69ea;
+    border-color: #8e69ea;
+    color: white;
+}
+.btn-masuk:focus {
+    background-color: #8e69ea;
+    border-color: #8e69ea;
+    color: white;
+}
+
+/* conten */
+.conten {
+    margin-top: 1%;
+    display: grid;
+    grid-template-areas: 'hero form';
+    grid-template-columns: 2.1fr 1fr;
+}
+/* hero */
+.hero-daftar {
+    grid-area: hero;
+    padding-top: 2.5%;
+    font-size: 26px;
+}
+.hero-daftar p span {
+    color: #ff00ff;
+}
+.gambar-hero {
+    top: 3.5%;
+    left: 2%;
+    position: absolute;
+    z-index: -99;
+}
+/* form */
+.form-kotak {
+    grid-area: form;
+}
+.form-daftar {
+    background-color: rgb(144, 144, 144);
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,.4);
+    color: whitesmoke;
+}
+.judul {
+    font-size: 20px;
+    margin-bottom: 3%;
+}
+.judul-form {
+    padding-bottom: 4px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+.form-control {
+    height: 34px;
+    border-radius: 7px;
+}
+
+.captcha {
+    display: grid;
+    justify-content: center;
+}
+
+.btn-daftar {
+    margin-top: 4%;
+    margin-bottom: 3%;
+    background-color: #ff00ff;
+    border-color: #ff00ff;
+    font-size: 28px;
+    line-height: 1;
+    padding: 7px 30px;
+    border-radius: 8px;
+    width: 100%;
+}
+.btn-daftar:hover {
+    background-color: #d000cd;
+    border-color: #d000cd;
+}
+.btn-daftar:focus {
+    background-color: #d000cd;
+    border-color: #d000cd;
+}
+.span1 {
+    font-weight: lighter;
+    font-size: 12px;
+}
+.span2 {
+    font-weight: lighter;
+    font-size: 14px;
+}
+.link1 {
+    color: lightskyblue;
+}
+.link1:hover {
+    text-decoration: none;
+}
+
+/* footer */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    display: inline-block;
+    color: black;
+}
+
+/* footer */
+.footer {
+    margin-top: 15px;
+    background-color: #ececec;
+    padding: 0 10%;
+    display: grid;
+    grid-template-areas: 'footer-layanan footer-icon';
+    grid-auto-columns: 3fr 2fr;
+    height: 55px;
+}
+
+.footer  a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-layanan ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-layanan {
+    grid-area: footer-layanan;
+    align-self: center;
+}
+
+.footer-layanan ul{
+    padding: 0;
+}
+
+
+.footer-icon {
+    grid-area: footer-icon;
+}
+
+/*grid footer icon*/
+
+.footer-icon {
+    display: grid;
+    grid-template-areas: 'icon-sosmed icon-genbookz';
+    grid-auto-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.icon-sosmed {
+    grid-area: icon-sosmed;
+}
+
+.icon-sosmed ul {
+    grid-area: icon-sosmed;
+    padding: 0;
+    text-align: right;
+}
+
+.icon-genbookz {
+    grid-area: icon-genbookz;
+}
+
+/*footer icon*/
+
+a img.icon-fb {
+    height: 34px;
+    width: 36px;
+}
+
+.footer-icon {
+    align-items: center;
+}
+
+
+.footer-icon .icon-sosmed ul li {
+    display: inline-block;
+}
+
+.icon-genbookz {
+    top: -4px;
+    color: rgb(133, 125, 125);
+    height: 26.36px;
+    position: relative;
+}
+
+.logo1 .lg-bw {
+    height: 24px;
+    width: 22px;
+    margin-right: 5px;
+}
+
+p.lg-footer {
+    font-size: 17px;
+    font-weight: 600;
+    color: #989898;
+}
+
+.icon-genbookz #copy {
+    font-size: 11pt;
+    color: #989898;
+}
+
+.icon-sosmed a {
+    color: #989898;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.genbookz-copy {
+    position: absolute;
+    top: 2px;
+    left: 30px;
+}
+
+
+/* breakpoint */
+@media (max-width: 1366px) {
+    .hero-daftar {
+        padding-top: 5%;
+    }
+    .gambar-hero {
+        transform: scale(0.9);
+        margin-left: -5%;
+    }
+}
+@media (max-width: 1299px) {
+    .container {
+        max-width: 1100px;
+        /* margin-left: 10%;
+        margin-right: 10%; */
+    }
+    .gambar-hero {
+        transform: scale(0.85);
+        margin-left: -8%;
+    }
+
+    /* Footer */
+    .footer {
+        display: grid;
+        grid-template-areas: 'footer-layanan' 'footer-icon';
+        grid-auto-columns: 1fr 1.2fr;
+        height: max-content;
+    }
+
+    .footer-layanan ul li {
+        display: block;
+        font-size: 10px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-icon {
+        display: grid;
+        grid-template-areas: 'icon-genbookz' 'icon-sosmed';
+        grid-auto-rows: 1fr 2.5fr;
+        position: relative;
+    }
+
+    .icon-sosmed a {
+        font-size: 25px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .icon-sosmed ul {
+        text-align: center;
+    }
+
+    .footer-icon {
+        gap: 0px;
+    }
+
+    .icon-genbookz {
+        text-align: center;
+    }
+
+    .genbookz-copy {
+        position: absolute;
+        display: inline-block;
+        top: 5px;
+        left: 33%;
+    }
+
+    .logo1 .lg-bw {
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        left: 25%;
+    }
+}
+@media (max-width: 1080px) {
+    .container {
+        max-width: 960px;
+    }
+    .gambar-hero {
+        margin-left: -12%;
+    }
+    .navbar-daftar {
+        grid-template-columns: 3fr 1fr 2fr;
+    }
+}
+@media (max-width: 768px) {
+    .bg1, .bg2 {
+        display: block;
+    }
+    .container {
+        max-width: 700px;
+    }
+    .navbar-daftar {
+        grid-template-columns: 1fr 0fr 1fr;
+    }
+    .dropdown1 {
+        display: none;
+    }
+    .conten {
+        grid-template-columns: 0fr 1fr;
+        margin-top: 5%;
+    }
+    .gambar-hero {
+        display: none;
+    }
+    .hero-daftar {
+        display: none;
+    }
+    .form-daftar {
+        margin: 0 15%;
+    }
+}
+@media (max-width: 654px) {
+    .footer-layanan{
+        padding-left: 18%;
+    }
+    .li-1 {
+        margin-left: 5%;
+    }
+}
+@media (max-width: 580px) {
+    .bg1, .bg2 {
+        display: none;
+    }
+    .container {
+        max-width: 460px;
+        padding-top: 15px;
+    }
+    .navbar-daftar {
+        grid-template-areas: 'logo'
+                             'tamu-masuk';
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+    div.navbar-daftar {
+        margin-top: 0;
+        
+    }
+    div.navbar-daftar .navbar-brand {
+        justify-self: center;
+        margin-right: 0;
+        
+    }
+    .navbar-daftar .tamu-masuk {
+        justify-self: center;
+    }
+    .tamu-masuk .btn{
+        font-size: 14px;
+    }
+    .form-daftar {
+        background: transparent;
+        color: black;
+        margin: unset;
+    }
+    .judul-form {
+        font-weight: normal;
+    }
+    .link1 {
+        color: cornflowerblue;
+    }
+}
+@media (max-width: 420px) {
+    .container {
+        max-width: 340px;
+    }
+    .footer-layanan{
+        padding-left: 13.5%;
+    }
+}

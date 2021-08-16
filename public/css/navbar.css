@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    display: inline-block;
+    line-height: 0px;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+nav {
+    border-bottom: 1.5px solid rgb(169, 168, 168);
+    height: 49px;
+}
+nav.navbar {
+    padding: 5px;
+    display: grid;
+    grid-template-areas: 'brand kategori kosong kanan';
+    grid-template-columns: 1fr 1fr 3.5fr 2.2fr;
+}
+.navbar-brand {
+    grid-area: brand;
+    margin: 0 0 0 2.4%;
+    padding: 0;
+    line-height: unset;
+    justify-self: center;
+}
+img {
+    margin-top: 0.5px;
+    display: inline-block;
+}
+.dropdown {
+    grid-area: kategori;
+    margin-left: 14.7%;
+    margin-top: 1px;
+    position: absolute;
+}
+.kategori {
+    background-color: white;
+    color: black;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 16px;
+    border-radius: 14px;
+    border: none;
+}
+.kategori:hover {
+    background-color: rgb(231, 26, 238);
+}
+.kategori::after {
+    vertical-align: 0.03em;
+    border-top: .5em solid;
+    margin-left: 0;
+
+}
+.dropdown-menu {
+    top: 100%;
+    border: 2px solid rgba(0,0,0,.25);
+    border-radius: 14px;
+}
+
+div.kosong {
+    grid-area: kosong;
+    background-color: red;
+}
+div.kanan {
+    grid-area: kanan;
+    display: grid;
+    grid-template-areas: 'cari masuk daftar';
+    grid-template-columns: 3fr 1fr 1.4fr;
+    column-gap: 5px;
+}
+
+
+/* TODO: SEARCH */
+
+.search-box {
+    grid-area: cari;
+    align-self: center;
+    background-color: rgb(182, 182, 182);
+    height: 26px;
+    border-radius: 7px;
+    padding: 1px 0 1px 8px;
+    box-sizing: border-box;
+}
+.search-btn img {
+    margin-top: -5px;
+}
+.search-btn {
+    text-decoration: none;
+}
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    margin-left: 3px;
+    width: 200px;
+}
+
+/* masuk */
+div.masuk {
+    grid-area: masuk;
+    justify-self: center;
+    align-self: center;
+}
+div.masuk a {
+    color: #333;
+    text-decoration: none;
+}
+div.masuk a:hover {
+    font-weight: 600;
+}
+
+/* daftar */
+div.daftar {
+    grid-area: daftar;
+}
+.btn-outline-secondary {
+    color: rgb(208, 0, 205);
+    border-color: rgb(208, 0, 205);
+}
+.btn {
+    line-height: 1.2;
+}
+.btn:hover {
+    background-color: rgb(208, 0, 205);
+    color: white;
+    border-color: rgb(208, 0, 205);
+}
+
+.isi-home {
+    font-weight: bold;
+    font-size: 50px;
+    padding-top: 200px;
+}
+
+.isi-home span {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/* cari */
+div.icon-cari {
+    display: none;
+}
+
+/* nav prof */
+div#nav-prof {
+    display: none;
+}
+
+/* home */
+div.rumah {
+    display: none;
+}
+
+/* icon-cari */
+div#navSearch {
+    display: none;
+}
+
+/* icon-notif */
+div#navnotif{
+    display: none;
+}
+
+/* daftar bacaan */
+div#navdb {
+    display: none;
+}
+
+/* munculkan */
+.munculkan {
+    display: none!important;
+}
+.munculkan-block {
+    display: block!important;
+}
+
+/* BREAKPoINt */
+@media screen and (max-widht: )

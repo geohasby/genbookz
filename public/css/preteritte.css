@@ -1,0 +1,601 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* !STYLE */
+
+body {
+    font-family: Bahnschrift, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+body a {
+    color: black;
+}
+
+body a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* logo */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    display: inline-block;
+    line-height: 34px;
+    margin-top: -2px;
+    margin-left: -2px;
+    color: black;
+}
+.navbar-brand {
+    grid-area: logo;
+    padding: 0;
+    line-height: unset;
+    justify-self: start;
+    margin-right: 0;
+}
+
+
+.container1 {
+    max-width: 1080px;
+    margin: auto;
+}
+
+.hero-img {
+    position: relative;
+}
+
+.efek-img {
+    position: absolute;
+    background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(40,219,255,0) 4%, rgba(0,212,255,0) 40%, rgba(0,212,255,0) 60%, rgba(0,212,255,0) 96%, rgba(255,255,255,1) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+.konten-buku {
+    display: grid;
+    grid-template-areas: 'judul judul'
+                         'kiri kanan';
+    grid-template-columns: 3fr 1.2fr;
+}
+
+.kiri-buku {
+    grid-area: kiri;
+    padding-right: 12px;
+    border-right: 2px solid #ddd;
+}
+
+.ket-buku {
+    margin-bottom: 30px;
+}
+
+.judul-buku {
+    grid-area: judul;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.ket-atas {
+    position: relative;
+}
+
+.genre, .thn-rilis {
+    font-weight: lighter;
+}
+
+.btn-suka, .btn-tdb {
+    padding: 1px 10px;
+    color: #dd00dd;
+    border-radius: 8px;
+    border: 1px solid #dd00dd;
+    margin: 8px 5px 15px 0;
+    fill: #dd00dd;
+}
+
+.btn-baca {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    background-color: #dd00dd;
+    color: white;
+    fill: white;
+    border-radius: 8px;
+    padding: 2px 10px;
+}
+
+.btn-suka:hover, .btn-tdb:hover {
+    color: #fff;
+    fill: #fff;
+    background-color: #dd00dd;
+}
+
+.btn-baca:hover {
+    color: #fff;
+    background-color: #ff00ff;
+}
+
+.sinopsis {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.isi-sinopsis, .isi-tokoh {
+    padding-top: 3px;
+    font-weight: lighter;
+}
+
+.rate-share-hp {
+    display: none;
+}
+
+.jdl-isi {
+    font-size: 21px;
+    border-bottom: 1.5px solid #ddd;
+    padding-bottom: 3px;
+}
+
+.card-chapter {
+    padding: 5px 0 8px;
+    border-bottom: 1.5px solid #ddd;
+}
+
+.jdl-chapter {
+    margin-bottom: 3px;
+}
+
+.isi-chapter {
+    display: flex;
+}
+
+.isi-chapter img {
+    width: 160px;
+    height: 100px;
+}
+
+.desc-chapt {
+    padding: 6px 10px;
+    font-weight: lighter;
+    font-size: 15px;
+    line-height: 17px;
+}
+
+.tgl-chapter {
+    margin-top: 3px;
+}
+
+/* kanan buku */
+.kanan-buku {
+    grid-area: kanan;
+    padding-left: 12px;
+}
+
+.rate-share {
+    border-bottom: 1.5px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.fa-star {
+    color: rgb(255, 208, 0);
+}
+
+.rate-buku, .share-buku {
+    margin-bottom: 12px;
+}
+
+.jdl-rate, .jdl-share {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.rate-buku span, .share-buku span {
+    font-size: 27px;
+    cursor: pointer;
+}
+
+#rating-value {
+    width: 20px;
+    border: none;
+}
+
+#rating-value-hp {
+    width: 15px;
+    border: none;
+}
+
+#rating-value:focus, #rating-value-hp:focus {
+    border: none;
+    outline: none;
+}
+
+.share-buku span {
+    color: gray;
+    margin-right: 8px;
+}
+
+.jdl-rec {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-rec {
+    display: flex;
+    padding: 6px;
+    border: 1.5px solid lightgray;
+    margin-bottom: 10px;
+}
+
+.card-rec:hover {
+    border: 1.5px solid #dd00dd;
+}
+
+.img-rec {
+    width: 90px;
+    height: 135px;
+    margin-right: 5px;
+}
+
+.img-rec img {
+    width: 90px;
+    height: 100%;
+}
+
+.jdl-buku-rec {
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.cocok-rilis-genre {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.rec-cocok {
+    color: #dd00dd;
+}
+
+.deskripsi-rec {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.ket-rec-hp {
+    display: none;
+}
+/* footer */
+.footer {
+    margin-top: 30px;
+    background-color: #ececec;
+    padding: 0 10%;
+    display: grid;
+    grid-template-areas: 'footer-layanan footer-icon';
+    grid-auto-columns: 3fr 2fr;
+    height: 55px;
+}
+
+.footer  a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-layanan ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-layanan {
+    grid-area: footer-layanan;
+    align-self: center;
+}
+
+.footer-layanan ul{
+    padding: 0;
+}
+
+
+.footer-icon {
+    grid-area: footer-icon;
+}
+
+/*grid footer icon*/
+
+.footer-icon {
+    display: grid;
+    grid-template-areas: 'icon-sosmed icon-genbookz';
+    grid-auto-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.icon-sosmed {
+    grid-area: icon-sosmed;
+}
+
+.icon-sosmed ul {
+    grid-area: icon-sosmed;
+    padding: 0;
+    text-align: right;
+}
+
+.icon-genbookz {
+    grid-area: icon-genbookz;
+}
+
+/*footer icon*/
+
+a img.icon-fb {
+    height: 34px;
+    width: 36px;
+}
+
+.footer-icon {
+    align-items: center;
+}
+
+
+.footer-icon .icon-sosmed ul li {
+    display: inline-block;
+}
+
+.icon-genbookz {
+    color: rgb(133, 125, 125);
+    height: 26.36px;
+    position: relative;
+}
+
+.logo1 .lg-bw {
+    height: 24px;
+    width: 22px;
+    margin-right: 5px;
+}
+
+p.lg-footer {
+    font-size: 17px;
+    font-weight: 600;
+    color: #989898;
+}
+
+.icon-genbookz #copy {
+    font-size: 11pt;
+    color: #989898;
+}
+
+.icon-sosmed a {
+    color: #989898;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.genbookz-copy {
+    position: absolute;
+    top: 0px;
+    left: 30px;
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+    .footer {
+        display: grid;
+        grid-template-areas: 'footer-layanan' 'footer-icon';
+        grid-auto-columns: 1fr 1.2fr;
+        height: max-content;
+    }
+
+    .footer-layanan ul li {
+        display: block;
+        font-size: 10px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-icon {
+        display: grid;
+        grid-template-areas: 'icon-genbookz' 'icon-sosmed';
+        grid-auto-rows: 1fr 2.5fr;
+        position: relative;
+    }
+
+    .icon-sosmed a {
+        font-size: 25px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .icon-sosmed ul {
+        text-align: center;
+    }
+
+    .footer-icon {
+        gap: 0px;
+    }
+
+    .icon-genbookz {
+        text-align: center;
+    }
+
+    .genbookz-copy {
+        position: absolute;
+        display: inline-block;
+        top: 5px;
+        left: 33%;
+    }
+
+    .logo1 .lg-bw {
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        left: 25%;
+    }
+}
+@media (max-width: 500px) {
+    .konten-buku {
+        grid-template-areas: 'judul'
+                             'kiri'
+                             'kanan';
+        grid-template-columns: 1fr;
+        padding: 0 6px;
+    }
+
+    .kiri-buku {
+        border-right: none;
+        padding: 0;
+    }
+
+    .judul-buku {
+        grid-area: judul;
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+    .ket-buku {
+        margin-bottom: 15px;
+    }
+
+    .genre, .thn-rilis {
+        font-size: 14px;
+        margin-top: 3px;
+    }
+
+    .btn-suka, .btn-tdb {
+        margin: 8px 1px 15px 0;
+    }
+
+    .btn-suka span, .btn-tdb span {
+        font-size: 14px;
+    }
+
+    .tokoh-buku {
+        margin-bottom: 15px;
+    }
+
+    .isi-sinopsis, .isi-tokoh {
+        font-size: 13px;
+    }
+
+    .rate-share-hp {
+        display: block;
+    }
+
+    .jdl-rate, .jdl-share {
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+
+    .rate-buku span, .share-buku span {
+        font-size: 18px;
+    }
+
+    .jdl-isi {
+        font-size: 16px;
+    }
+
+    .jdl-chapter {
+        font-size: 14px;
+    }
+
+    .isi-chapter img {
+        width: 120px;
+        height: 80px;
+    }
+
+    .desc-chapt {
+        font-size: 12px;
+        line-height: 12px;
+        padding: 0 8px;
+    }
+
+    /* kanan */
+
+    .kanan-buku {
+        padding: 0;
+    }
+
+    .rate-share {
+        display: none;
+    }
+
+    .jdl-rec {
+        font-size: 15px;
+        margin: 6px 0;
+    }
+
+    .bungkusCR {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .card-rec {
+        padding: 0;
+        width: 92px;
+        border: none;
+    }
+
+    .img-rec {
+        margin: 0;
+    }
+
+    .img-rec img {
+        border: 1.5px solid lightgray;
+    }
+
+    .ket-rec {
+        display: none;
+    }
+
+    .ket-rec-hp {
+        display: block;
+    }
+
+    .jdl-buku-rec {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .rilis-rec {
+        font-weight: lighter;
+        font-size: 12px;
+    }
+}

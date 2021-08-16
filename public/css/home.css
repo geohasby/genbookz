@@ -1,0 +1,450 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* font */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cutive+Mono&display=swap');
+
+/* !STYLE */
+
+body {
+    font-family: Bahnschrift, Helvetica, sans-serif;
+    font-weight: normal;
+    /* background-color: #000; */
+}
+
+body .btn-link, body .btn-link:active, body .btn-link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.container1 {
+    max-width: 1220px;
+    margin: auto;
+}
+
+.hero {
+    display: grid;
+    grid-template-areas: 'isi backdrop';
+    grid-template-columns: 1fr 2.5fr;
+}
+
+.isihero {
+    grid-area: isi;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(270deg, rgba(0,212,255,0) 0%, rgba(255,255,255,1) 14%);
+    height: 567px;
+}
+
+.judulbukuhero {
+    margin-bottom: 15px;
+    margin-top: -80px;
+}
+
+.judulbukuheroutama {
+    font-size: 70px;
+    font-family: 'Cinzel', serif;
+    color: #000;
+}
+.judulbukuherokedua {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 20px;
+    color: #000;
+}
+
+.ratingbukuhero {
+    font-size: 14px;
+    margin-bottom: 13px;
+    color: #000;
+    /* font-weight: bold; */
+}
+
+.ratingbukuhero span {
+    color: #ff00ff;
+}
+
+.deskripsibukuhero {
+    padding: 0 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.3;
+    font-weight: lighter;
+    color: #000;
+}
+
+.buttonhero {
+    display: grid;
+    grid-template-areas: 'like baca db';
+    grid-template-columns: 2fr 1.5fr 2fr;
+    padding-top: 10px;
+}
+
+.likehero {
+    grid-area: like;
+    justify-self: end;
+    border-radius: 50%;
+    border: 1px solid #ff00ff;
+    padding: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.likehero svg {
+    fill: #ff00ff;
+}
+
+.readhero {
+    grid-area: baca;
+    justify-self: center;
+    color: white;
+    background-color: #ff00ff;
+    width: 100%;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.readhero .btn {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.tambahdbhero {
+    grid-area: db;
+    justify-self: start;
+    border-radius: 50%;
+    border: 1px solid #ff00ff;
+    padding: 4px;
+    margin-left: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.tambahdbhero svg {
+    fill: #ff00ff;
+}
+
+.gambarbackdrop {
+    grid-area: backdrop;
+}
+
+.gambarbackdrop img {
+    position: absolute;
+    right: 0;
+    z-index: -3;
+}
+
+/* isi HOME */
+
+.isibuku {
+    position: absolute;
+    top: 530px;
+}
+
+.judul-rec {
+    margin-bottom: 15px;
+    font-size: 17px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.contCard {
+    display: grid;
+    gap: 21.5px;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.home-card {
+    width: 155px;
+    height: 230px;
+    cursor: pointer;
+}
+
+.bungkusimg {
+    justify-self: center;
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid lightgray;
+}
+
+.bungkusimg:hover {
+    border: 2px solid #ff00ff;
+}
+
+.img-card-home {
+    width: 100%;
+    height: 100%;
+}
+
+.judul-card-home {
+    font-size: 15px;
+    padding: 3px 0 3px;
+}
+
+.rilis-card-home {
+    font-weight: lighter;
+    font-size: 13.5px;
+}
+
+.home-card:hover {
+    color: #dd00dd;
+}
+
+/* Footer */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    display: inline-block;
+    color: black;
+}
+
+.footer {
+    margin-top: 230px;
+    background-color: #ececec;
+    padding: 0 10%;
+    display: grid;
+    grid-template-areas: 'footer-layanan footer-icon';
+    grid-auto-columns: 3fr 2fr;
+    height: 55px;
+}
+
+.footer  a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.footer-layanan ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-layanan {
+    grid-area: footer-layanan;
+    align-self: center;
+}
+
+.footer-layanan ul{
+    padding: 0;
+}
+
+
+.footer-icon {
+    grid-area: footer-icon;
+}
+
+/*grid footer icon*/
+
+.footer-icon {
+    display: grid;
+    grid-template-areas: 'icon-sosmed icon-genbookz';
+    grid-auto-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.icon-sosmed {
+    grid-area: icon-sosmed;
+}
+
+.icon-sosmed ul {
+    grid-area: icon-sosmed;
+    padding: 0;
+    text-align: right;
+}
+
+.icon-genbookz {
+    grid-area: icon-genbookz;
+}
+
+/*footer icon*/
+
+a img.icon-fb {
+    height: 34px;
+    width: 36px;
+}
+
+.footer-icon {
+    align-items: center;
+}
+
+
+.footer-icon .icon-sosmed ul li {
+    display: inline-block;
+}
+
+.icon-genbookz {
+    color: rgb(133, 125, 125);
+    height: 26.36px;
+    position: relative;
+}
+
+.logo1 .lg-bw {
+    height: 24px;
+    width: 22px;
+    margin-right: 5px;
+}
+
+p.lg-footer {
+    font-size: 17px;
+    font-weight: 600;
+    color: #989898;
+}
+
+.icon-genbookz #copy {
+    font-size: 11pt;
+    color: #989898;
+}
+
+.icon-sosmed a {
+    color: #989898;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.genbookz-copy {
+    position: absolute;
+    top: 2px;
+    left: 30px;
+}
+
+/* Breakpoint */
+@media (max-width: 500px) {
+    .hero {
+        display: none;
+    }
+
+    .isibuku {
+        position: static;
+    }
+
+    .judul-rec {
+        padding: 12px 0 0 12px;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .contCard {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 10px;
+        gap: 11px;
+    }
+
+    #navSearch, #navnotif, #navdb {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        background-color: white;
+    }
+
+    #nav-prof {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        display: grid;
+        grid-template-areas: 'footer-layanan' 'footer-icon';
+        grid-auto-columns: 1fr 1.2fr;
+        height: max-content;
+    }
+
+    .footer-layanan ul li {
+        display: block;
+        font-size: 10px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-icon {
+        display: grid;
+        grid-template-areas: 'icon-genbookz' 'icon-sosmed';
+        grid-auto-rows: 1fr 2.5fr;
+        position: relative;
+    }
+
+    .icon-sosmed a {
+        font-size: 25px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .icon-sosmed ul {
+        text-align: center;
+    }
+
+    .footer-icon {
+        gap: 0px;
+    }
+
+    .icon-genbookz {
+        text-align: center;
+    }
+
+    .genbookz-copy {
+        position: absolute;
+        display: inline-block;
+        top: 5px;
+        left: 33%;
+    }
+
+    .logo1 .lg-bw {
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        left: 25%;
+    }
+}
